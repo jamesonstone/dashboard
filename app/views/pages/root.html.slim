@@ -1,13 +1,26 @@
 javascript:
   /* This little bit of silliness is here to ensure our js feature specs are working. Remove at will. */
   $(document).ready(function() {
-    $('.jumbotron p:last').after("<p>Enjoy!</p>")
+    $('.jumbotron p:last')
   });
 
 .jumbotron
-  h1 Hello, world!
-  br
-  p Welcome to your newly generated rails application...
-  p Meander around the code to see what's been done for you. Many small, and a few not-so-small, customizations have been made.
-  p Custom generator templates create views that are bootstrap compatible and specs that are factory-aware and follow best practices.
-  p Your application is ready for easy deployment to heroku.
+  h1 Android Flagship
+  p iHeartRadio android mobile application
+  = @name  
+
+- var = true
+
+- if var == false
+  .alert.alert-success role="alert"  three more times  
+
+- else
+  .alert.alert-danger role="alert"  two more times
+
+.jumbotron
+  h1 iOS Flagship
+  p iHeartRadio iOS mobile application  
+
+
+.alert.alert-success role="alert"  three more times
+.alert.alert-danger role="alert"  two more times
