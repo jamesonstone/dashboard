@@ -18,6 +18,8 @@ gem 'uglifier'
 
 gem 'awesome_print'
 
+gem 'httparty'
+
 group :production, :acceptance do
   gem 'rack-timeout'
   gem 'rails_stdout_logging'

@@ -5,22 +5,30 @@ javascript:
   });
 
 .jumbotron
-  h1 Android Flagship
-  p iHeartRadio android mobile application
-  = @name  
-
-- var = true
-
-- if var == false
-  .alert.alert-success role="alert"  three more times  
-
-- else
-  .alert.alert-danger role="alert"  two more times
-
-.jumbotron
   h1 iOS Flagship
   p iHeartRadio iOS mobile application  
+ 
+
+/* VARS */
+- ci_result = @result
 
 
-.alert.alert-success role="alert"  three more times
-.alert.alert-danger role="alert"  two more times
+
+
+- if ci_result == "FAILURE"
+  .alert.alert-danger role="alert" 
+    = @display_name
+    | : FAILED 
+    = @current_time
+
+
+- else
+  .alert.alert-success role="alert"  three more times  
+
+.jumbotron
+  h1 Android Flagship
+  p iHeartRadio android mobile application
+
+
+.alert.alert-success role="alert"  this is a PASS
+.alert.alert-danger role="alert"  this is a FAILURE
