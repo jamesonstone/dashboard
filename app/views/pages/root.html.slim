@@ -4,31 +4,26 @@ javascript:
     $('.jumbotron p:last')
   });
 
-.jumbotron
-  h1 iOS Flagship
-  p iHeartRadio iOS mobile application  
- 
 
 /* VARS */
-- ci_result = @result
+- ios_flagship_ci_result = @ios_flagship_result
 
-
-
-
-- if ci_result == "FAILURE"
-  .alert.alert-danger role="alert" 
-    = @display_name
+- if ios_flagship_ci_result == "FAILURE"
+  .jumbotron style=("background:red !important") 
+    h1 iOS Flagship:
+    p Sanity run on Github "Push"
+    = @ios_flagship_display_name
     | : FAILED 
-    = @current_time
-
+    = @ios_flagship_current_time
 
 - else
-  .alert.alert-success role="alert"  three more times  
+  .jumbotron style=("background:green !important") 
+    h1 iOS Flagship: 
+    p Sanity run on Github "Push"
+    = @ios_flagship_display_name
+    | : SUCCESS 
+    = @ios_flagship_current_time
 
-.jumbotron
-  h1 Android Flagship
-  p iHeartRadio android mobile application
-
-
-.alert.alert-success role="alert"  this is a PASS
-.alert.alert-danger role="alert"  this is a FAILURE
+/ .jumbotron style=("background:light green !important") 
+/   h1 iOS Flagship: Branch
+/   p Sanity run on-demand (any branch built)
