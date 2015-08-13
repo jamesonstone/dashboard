@@ -21,6 +21,10 @@ class PagesController < ApplicationController
 
   end
 
+  def home
+      #rails generate model DashboardRecord project_name:string, status:boolean, comments:string, created_at:datetime, updated_at:datetime
+  end
+
   def getCurrentTime
     return Time.now.strftime("(Submitted: %m/%d/%Y | %H:%M)")
   end
