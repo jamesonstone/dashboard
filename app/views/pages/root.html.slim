@@ -33,12 +33,12 @@ javascript:
 
 .jumbotron style=("background:grey !important")
   h2 Web
-  - if @dashboard_items.any?
-    table#items
-      - for items in @dashboard_items
-        tr
-          td.name = items.project_name
-          td.comments = items.comments
+  /- if @dashboard_items.any?
+  /  table#items
+  /    - for items in @dashboard_items
+  /      tr
+  /        td.name = items.project_name
+  /        td.comments = items.comments
 
 
 

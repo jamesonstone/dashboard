@@ -1,0 +1,16 @@
+h1 ALL Dashboard Records
+
+table
+  tr
+    th Project Name
+    th Status
+    th Comments
+
+  - @records.each  do |record|
+    tr
+      td
+        = record.project_name
+      td
+        = record.status
+      td
+        = record.comments

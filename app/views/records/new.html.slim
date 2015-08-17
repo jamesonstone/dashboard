@@ -1,0 +1,15 @@
+h1 New Record
+
+= form_for :records, url: records_path do |f|
+  p
+    = f.label :project_name
+    = f.text_field :project_name
+  p
+    = f.label :status
+    = f.text_field :status
+  p
+    = f.label :comments
+    = f.text_field :comments
+  p
+    = f.submit
+

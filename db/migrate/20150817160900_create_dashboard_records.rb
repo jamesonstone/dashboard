@@ -6,7 +6,8 @@ class CreateDashboardRecords < ActiveRecord::Migration
       t.string :comments
       t.datetime :created_at
       t.datetime :updated_at
-      t.timestamps
+
+      t.timestamps null: false
     end
   end
 end

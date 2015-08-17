@@ -1,7 +1,8 @@
 Dashboard::Application.routes.draw do
 
+  resources :records
+
   root to: 'pages#root'
-  dashboard_record_controller to: 'dashboard_record#root'
 
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
 
