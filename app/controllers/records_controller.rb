@@ -1,21 +1,20 @@
 class RecordsController < ApplicationController
 
   def index
-    @records = DashboardRecord.all
+    @records = Record.all
   end
 
   def show
-    @record = DashboardRecord.find(params[:id])
+    @record = Record.find(params[:id])
   end
 
   def new
   end
 
   def create
-    @record = DashboardRecord.new(record_params)
+    @record = Record.new(record_params)
     @record.save
-    # raise @record.to_s
-    redirect_to client_path(@record)
+    redirect_to @record
   end
 
   private

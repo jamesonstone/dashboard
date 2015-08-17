@@ -1,6 +1,6 @@
-class CreateDashboardRecords < ActiveRecord::Migration
+class CreateRecords < ActiveRecord::Migration
   def change
-    create_table :dashboard_records do |t|
+    create_table :records do |t|
       t.string :project_name
       t.boolean :status
       t.string :comments
