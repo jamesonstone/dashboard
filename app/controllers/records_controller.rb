@@ -14,7 +14,8 @@ class RecordsController < ApplicationController
   def create
     @record = DashboardRecord.new(record_params)
     @record.save
-    debugger redirect_to @record
+    # raise @record.to_s
+    redirect_to client_path(@record)
   end
 
   private
