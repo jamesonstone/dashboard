@@ -6,7 +6,7 @@ javascript:
 
 
 /* VARS */
-- ios_flagship_ci_result = @ios_flagship_result
+= ios_flagship_ci_result = @ios_flagship_result
 
 - if ios_flagship_ci_result == "FAILURE"
   .jumbotron style=("background:red !important")
@@ -33,7 +33,14 @@ javascript:
 
 .jumbotron style=("background:grey !important")
   h2 Web
-  p Lorem Ipsum
+  - if @dashboard_items.any?
+    table#items
+      - for items in @dashboard_items
+        tr
+          td.name = items.project_name
+          td.comments = items.comments
+
+
 
 .jumbotron style=("background:grey !important")
   h2 Local

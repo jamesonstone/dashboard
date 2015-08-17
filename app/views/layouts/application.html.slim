@@ -19,35 +19,41 @@ html
             a.navbar-brand href='/' iHR Test Engineering Dashboard
           .collapse.navbar-collapse
             ul.nav.navbar-nav.navbar-right
-              a.navbar-brand data-target="#myModal" data-toggle="modal" href="#myModal" Update Dailies
-            #myModal.modal.fade data-backdrop="false"
-              .modal-dialog
-                .modal-content
-                  .modal-header
-                    button.close aria-hidden="true" data-dismiss="modal" type="button"  ×
-                    h4.modal-title Update Dailies
-                  .modal-body
-                    .form-group
-                      label for="project"  Project:
-                      select.form-control
-                        option value="android-flagship" Android Flagship
-                        option value="ios-flagship" iOS Flagship
-                        option value="web" Web
-                        option value="local" Local
-                        option value="android-auto" Android Auto
-                        option value="ios-auto" iOS Auto
-                        option value="third-party" 3rd Parties and Home Control
-                    .form-group
-                      label for="status"  Status:
-                      select.form-control
-                        option value="pass" Pass
-                        option value="fail" Fail
-                    .form-group
-                      label for="comments"  Comments:
-                      input#textarea.form-control placeholder="Enter additional comments here"
-                  .modal-footer
-                    a.btn data-dismiss="modal" href="#"  Close
-                    a.btn.btn-primary href="#"  Submit
+              a.navbar-brand href="dashboard_record_form" Update Dailies
+            / fancy modal pop up
+              /a.navbar-brand data-target="#myModal" data-toggle="modal" href="#myModal" Update Dailies
+            /#myModal.modal.fade data-backdrop="false"
+            /  .modal-dialog
+            /    .modal-content
+            /      .modal-header
+            /        button.close aria-hidden="true" data-dismiss="modal" type="button"  ×
+            /        h4.modal-title Update Dailies
+            /      .modal-body
+            /
+            /        .form-group
+            /          label for="project"  Project:
+            /          select.form-control
+            /            = :project_name
+            /            option value="android-flagship" Android Flagship
+            /            option value="ios-flagship" iOS Flagship
+            /            option value="web" Web
+            /            option value="local" Local
+            /            option value="android-auto" Android Auto
+            /            option value="ios-auto" iOS Auto
+            /            option value="third-party" 3rd Parties and Home Control
+            /        .form-group
+            /          label for="status"  Status:
+            /          select.form-control
+            /            = :status
+            /            option value="pass" Pass
+            /            option value="fail" Fail
+            /        .form-group
+            /          label for="comments"  Comments:
+            /          input#textarea.form-control placeholder="Enter additional comments here"
+            /            = :comments
+            /      .modal-footer
+            /        a.btn data-dismiss="modal" Close
+            /        a.btn.btn-primary href="#" Submit
 
 
 
