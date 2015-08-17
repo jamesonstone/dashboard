@@ -18,6 +18,12 @@ class PagesController < ApplicationController
     @ios_flagship_display_name = android_flagship_response['fullDisplayName']
     @ios_flagship_current_time = Time.now.strftime("(last checked %m/%d/%Y | %H:%M)")
 
+    @ios_flag = find_last_submission(2)
+
+  end
+
+  def find_last_submission(proj_num)
+    return Record.where(project_name: "proj_num").last
   end
 
 end

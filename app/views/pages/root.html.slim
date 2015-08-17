@@ -11,7 +11,6 @@ javascript:
 - if ios_flagship_ci_result == "FAILURE"
   .jumbotron style=("background:red !important")
     h2 iOS Flagship
-    p Sanity run on "Push"
     = @ios_flagship_display_name
     | : FAILED
     = @ios_flagship_current_time
@@ -19,14 +18,12 @@ javascript:
 - else
   .jumbotron style=("background:green !important")
     h2 iOS Flagship
-    p Sanity run on "Push"
     = @ios_flagship_display_name
     | : SUCCESS
     = @ios_flagship_current_time
 
 .jumbotron style=("background:green !important")
   h2 Android Flagship
-  p Sanity run on "Push"
 /  = @ios_flagship_display_name
   | : SUCCESS
 /  = @ios_flagship_current_time
@@ -44,7 +41,6 @@ javascript:
 
 .jumbotron style=("background:grey !important")
   h2 Local
-  p Sanity run on "Push"
 
 .jumbotron style=("background:grey !important")
   h2 iOS Auto
