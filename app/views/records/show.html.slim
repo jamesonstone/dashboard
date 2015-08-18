@@ -1,9 +1,22 @@
-p
-  strong Project Name
-  br
-  = @record.project_name
-
-p
-  strong Comments
-  br
-  = @record.comments
+h1 Thank you for your Dailies Submission!
+hr
+h1 Here's what we got:
+br
+h4 Project Name
+= @proj_name
+h4 Status:
+= @proj_status
+h4 Comments:
+= @record.comments
+h4 Updated At:
+= @record.updated_at
+h4 Created At:
+= @record.created_at
+br
+br
+a.btn.btn-success href="/" Done
+br
+br
+hr
+p If this is incorrect, please resubmit.
+a href="/records/new" Resubmit
