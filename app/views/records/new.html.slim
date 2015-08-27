@@ -1,6 +1,6 @@
 h1 New Dashboard Record
 br
-h4 Please fill out the form below to update your daily
+h4 Please fill out the form below to update your daily or, if you'd like to create a new project,
 br
 = form_for :records, url: records_path do |f|
   .form-group
@@ -17,4 +17,5 @@ br
       br
       = f.text_area :comments
     = f.submit
+
 

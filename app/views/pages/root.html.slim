@@ -15,44 +15,67 @@ javascript:
     | : FAILED
     = @ios_flagship_current_time
 
-.jumbotron style=("background:green !important")
-  h2 Android Flagship
 
-.jumbotron style=("background:#{@web_color} !important")
-  h1 Web
-  h3 Status:
-  = @web_status
-  h4 Last Updated:
-  = @web.updated_at
-  h4 Comments:
-  = @web.comments
+table style="width:100%"
+  tr
+    td
+      .jumbotron style=("background:green !important")
+        h2 Android Flagship
+        h3 Status:
+        /= @android_flag_status
+        h4 Last Updated:
+        /= @android_flag.updated_at
+        h4 Comments:
+        /= @android_flag.comments
+    td
+      .jumbotron style=("background:#{@web_color} !important")
+        h1 Web
+        h3 Status:
+        = @web_status
+        h4 Last Updated:
+        = @web.updated_at
+        h4 Comments:
+        = @web.comments
+    td
+      .jumbotron style=("background:#{@local_color} !important")
+        h1 Local
+        h3 Status:
+        = @local_status
+        h4 Last Updated:
+        = @local.updated_at
+        h4 Comments:
+        = @local.comments
+  tr
+    td
+      .jumbotron style=("background:#{@ios_auto_color} !important")
+        h1 iOS Auto
+        h3 Status:
+        = @ios_auto_status
+        h4 Last Updated:
+        = @ios_auto.updated_at
+        h4 Comments:
+        = @ios_auto.comments    
+    td
+      .jumbotron style=("background:#{@android_auto_color} !important")
+        h1 Android Auto
+        h3 Status:
+        = @android_auto_status
+        h4 Last Updated:
+        = @android_auto.updated_at
+        h4 Comments:
+        = @android_auto.comments
+    td
+     .jumbotron style=("background:#{@third_party_color} !important")
+        h1 3rd Parties
+        h3 Status:
+        = @third_party_status
+        h4 Last Updated:
+        = @third_party.updated_at
+        h4 Comments:
+        = @third_party.comments
 
-.jumbotron style=("background:#{@local_color} !important")
-  h1 Local
-  h3 Status:
-  = @local_status
-  h4 Last Updated:
-  = @local.updated_at
-  h4 Comments:
-  = @local.comments
-
-.jumbotron style=("background:#{@ios_auto_color} !important")
-  h1 iOS Auto
-  h3 Status:
-  = @ios_auto_status
-  h4 Last Updated:
-  = @ios_auto.updated_at
-  h4 Comments:
-  = @ios_auto.comments
-
-.jumbotron style=("background:#{@android_auto_color} !important")
-  h1 Android Auto
-  h3 Status:
-  = @android_auto_status
-  h4 Last Updated:
-  = @android_auto.updated_at
-  h4 Comments:
-  = @android_auto.comments
+hr
+h1 Additional QA Projects:
 
 .jumbotron style=("background:#{@third_party_color} !important")
   h1 3rd Parties
@@ -62,3 +85,4 @@ javascript:
   = @third_party.updated_at
   h4 Comments:
   = @third_party.comments
+
