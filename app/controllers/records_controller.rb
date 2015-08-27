@@ -14,6 +14,10 @@ class RecordsController < ApplicationController
   def new
   end
 
+
+  def new_project
+  end
+
   def create
     @record = Record.new(record_params)
     @record.save

@@ -1,13 +1,27 @@
 h1 New Dashboard Record
 br
-h4 Please fill out the form below to update your daily or, if you'd like to create a new project,
+h4 Please fill out the form below to update your daily
 br
 = form_for :records, url: records_path do |f|
   .form-group
     .form-group
       = f.label :project_name
       br
-      = f.select :project_name, [['Android Flagship', 1], ['iOS Flagship', 2], ['Android Auto', 3], ['iOS Auto', 4], ['Web', 5], ['Local', 6], ['3rd Parties', 7]]
+      = f.select :project_name, [['Android Flagship', 1],
+      ['iOS Flagship', 2],
+      ['Android Auto', 3],
+      ['iOS Auto', 4],
+      ['Web', 5],
+      ['Local', 6],
+      ['3rd Parties', 7],
+      ['Add New Project', 8]]
+
+    div class="add_new_project"
+      .form-group
+        = f.label :project_name
+        br
+        = f.text_field :project_name 
+
     .form-group
       = f.label :status
       br
@@ -17,5 +31,3 @@ br
       br
       = f.text_area :comments
     = f.submit
-
-
