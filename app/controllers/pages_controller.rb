@@ -50,6 +50,11 @@ class PagesController < ApplicationController
     @third_party_status = find_status(@third_party.status)
     @third_party_color = set_status_color(@third_party.status)
 
+    # find additional third parties
+    @new_third_party = find_last_submission(8)
+
+
+
   end
 
 end

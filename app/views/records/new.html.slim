@@ -5,9 +5,10 @@ br
 = form_for :records, url: records_path do |f|
   .form-group
     .form-group
-      = f.label :project_name
+      = f.label :project_code
       br
-      = f.select :project_name, [['Android Flagship', 1],
+      = f.select :project_code,
+      [['Android Flagship', 1],
       ['iOS Flagship', 2],
       ['Android Auto', 3],
       ['iOS Auto', 4],
@@ -20,7 +21,7 @@ br
       .form-group
         = f.label :project_name
         br
-        = f.text_field :project_name 
+        = f.text_field :project_name
 
     .form-group
       = f.label :status
