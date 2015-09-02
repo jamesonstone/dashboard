@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def find_last_submission(proj_code)
+    if proj_code == 8
+      # get the list of all the third party projects
+      return Record.where(project_code: proj_code)
+    end
+    # else just return the last project
     return Record.where(project_code: proj_code).last
   end
 

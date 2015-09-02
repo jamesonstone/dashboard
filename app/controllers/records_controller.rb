@@ -8,7 +8,6 @@ class RecordsController < ApplicationController
     @record = Record.find(params[:id])
     @proj_status = find_status(@record.status)
     @proj_name = map_project_num_to_name(@record)
-
   end
 
   def new
