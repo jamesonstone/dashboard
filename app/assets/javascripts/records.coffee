@@ -4,7 +4,7 @@
 
 # helper function for animation on /records/new/
 $(document).ready ->
-  $('#records_project_name').on 'change', ->
+  $('#records_project_code').on 'change', ->
     if @value == '8'
       $('.add_new_project').show()
     else

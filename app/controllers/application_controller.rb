@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     return proj_status ? "green" : "red"
   end
 
-  def map_project_num_to_name(proj_code, proj_name)
+  def map_project_num_to_name(proj_code)
     # create directory of projects
     code_to_name_dict = {
         1 => "Android Flagship",
