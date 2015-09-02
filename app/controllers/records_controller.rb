@@ -7,7 +7,7 @@ class RecordsController < ApplicationController
   def show
     @record = Record.find(params[:id])
     @proj_status = find_status(@record.status)
-    @proj_name = map_project_num_to_name(@record.project_code)
+    @proj_name = map_project_num_to_name(@record)
 
   end
 
@@ -26,6 +26,6 @@ class RecordsController < ApplicationController
 
   private
     def record_params
-      params.require(:records).permit(:project_code, :status, :comments)
+      params.require(:records).permit(:project_code, :project_name, :status, :comments)
     end
 end

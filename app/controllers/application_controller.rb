@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     return proj_status ? "green" : "red"
   end
 
-  def map_project_num_to_name(proj_code)
+  def map_project_num_to_name(record)
     # create directory of projects
     code_to_name_dict = {
         1 => "Android Flagship",
@@ -25,15 +25,14 @@ class ApplicationController < ActionController::Base
         5 => "Web",
         6 => "Local",
         7 => "Third Parties",
-        8 => "Add New Project"
+        8 => "Add New Project" ##
     }
 
-    if proj_code == 8
-      #Record.where()
-      #return
+    if record.project_code == 8
+      return record.project_name
+    else
+      return code_to_name_dict[record.project_code]
     end
-
-    return code_to_name_dict[proj_code]
   end
 
 end
