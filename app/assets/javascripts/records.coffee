@@ -3,11 +3,5 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 # helper function for animation on /records/new/
-$(document).ready ->
-  $('#records_project_code').on 'change', ->
-    if @value == '8'
-      $('.add_new_project').show()
-    else
-      $('.add_new_project').hide()
-    return
-  return
+#showDiv = ->
+#  document.getElementById('add_new_project').style.display = 'block'

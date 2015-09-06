@@ -6,8 +6,6 @@ class RecordsController < ApplicationController
 
   def show
     @record = Record.find(params[:id])
-    @proj_status = find_status(@record.status)
-    @proj_name = map_project_num_to_name(@record)
   end
 
   def new
@@ -19,12 +17,13 @@ class RecordsController < ApplicationController
 
   def create
     @record = Record.new(record_params)
+    raises @record.to_s
     @record.save
     redirect_to @record
   end
 
   private
     def record_params
-      params.require(:records).permit(:project_code, :project_name, :status, :comments)
+      params.require(:records).permit(:project_name, :status, :comments)
     end
 end

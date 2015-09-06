@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+//helper function for animation on /records/new/
+function showDiv() {
+    document.getElementById("add_new_project").style.display = "block";
+}

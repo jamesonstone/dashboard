@@ -5,30 +5,35 @@ br
 = form_for :records, url: records_path do |f|
   .form-group
     .form-group
-      = f.label :project_code
+      = f.label :project_name
       br
-      = f.select :project_code,
-      [['Android Flagship', 1],
-      ['iOS Flagship', 2],
-      ['Android Auto', 3],
-      ['iOS Auto', 4],
-      ['Web', 5],
-      ['Local', 6],
-      ['3rd Parties', 7],
-      ['Add New Project', 8]]
-
-    div class="add_new_project"
-      .form-group
-        = f.label :project_name
-        br
-        = f.text_field :project_name
-
+      = f.select :project_name,
+      [['Android Flagship', 'Android Flagship'],
+      ['iOS Flagship', 'iOS Flagship'],
+      ['Android Auto', 'Android Auto'],
+      ['iOS Auto', 'iOS Auto'],
+      ['Web', 'Web'],
+      ['Local', 'Local']]
+      | &nbsp;
+      | or
+      | &nbsp;
+      button id="new_project" onclick="showDiv()" type="button"
+        | Add New Project
+      div id="add_new_project"
+        .form-group
+          = f.label :project_name
+          br
+          = f.text_field :project_name
     .form-group
       = f.label :status
       br
-      = f.select :status, [['PASS', true], ['FAIL', false]]
+      = f.select :status, [['Pass', 'Pass'], ['Fail', 'Fail']]
     .form-group
       = f.label :comments
       br
       = f.text_area :comments
-    = f.submit
+
+  br
+  br
+  hr
+  = f.submit

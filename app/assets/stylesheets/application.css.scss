@@ -4,15 +4,16 @@
 
 td {
 	padding: 10px;
+  	border-radius: 15px;
 }
 
 table {
 	border-spacing: 10px;
 	border-collapse: separate;
+  	width: 100%;
 }
 
-
-.add_new_project {
+#add_new_project {
 	display: none;
 	/*display: block;*/
 }
