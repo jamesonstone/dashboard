@@ -19,7 +19,7 @@ class PagesController < ApplicationController
     @local            = find_last_submission('Local')
 
     # returns list for recently added 3rd parties
-    @new_third_party  = find_last_submission('Add New Project')
+    @new_third_party  = find_additional_projects()
   end
 
 end

@@ -7,30 +7,35 @@ table
       h3 Status: #{@android_flagship.status}
       h4 Last Updated: #{@android_flagship.updated_at}
       h4 Comments: #{@android_flagship.comments}
+
   tr style=("background:#{@ios_flagship.color} !important")
     td
       h2 #{@ios_flagship.project_name}
       h3 Status: #{@ios_flagship.status}
       h4 Last Updated: #{@ios_flagship.updated_at}
       h4 Comments: #{@ios_flagship.comments}
+
   tr style=("background:#{@web.color} !important")
     td
       h1 #{@web.project_name}
       h3 Status:  #{@web.status}
       h4 Last Updated: #{@web.updated_at}
       h4 Comments: #{@web.comments}
-  tr style=("background:#{@web.color} !important")
+
+  tr style=("background:#{@local.color} !important")
     td
       h1 #{@local.project_name}
       h3 Status: #{@local.status}
       h4 Last Updated: #{@local.updated_at}
       h4 Comments: #{@local.comments}
+
   tr style=("background:#{@ios_auto.color} !important")
     td
       h1 #{@ios_auto.project_name}
       h3 Status: #{@ios_auto.status}
       h4 Last Updated: #{@ios_auto.updated_at}
       h4 Comments: #{@ios_auto.comments}
+
   tr style=("background:#{@android_auto.color} !important")
     td
       h1 #{@android_auto.project_name}
@@ -41,21 +46,13 @@ table
 hr
 h1 Additional QA Projects: #{@new_third_party.length}
 
-/- if @new_third_party.any?
-/  table
-/    - for projects in @new_third_party
-/      tr style=("background:" + projects.color + "!important")
-/        td
-/          h1 projects.project_name
-/          h3 Status: projects.status
-/          h4 Last Updated: projects.updated_at
-/          h4 Comments: projects.comments
-
-
-
-/.jumbotron style=("background:#{@third_party_color} !important")
-/  h1 3rd Parties
-/  h3 Status: #{@third_party_status}
-/  h4 Last Updated: #{@third_party.updated_at}
-/  h4 Comments: #{@third_party.comments}
+- if @new_third_party.any?
+  table
+   - for projects in @new_third_party
+      tr style=("background:" + projects.color + "!important")
+        td
+          h1 #{projects.project_name}
+          h3 Status: #{projects.status}
+          h4 Last Updated: #{projects.updated_at}
+          h4 Comments: #{projects.comments}
 
