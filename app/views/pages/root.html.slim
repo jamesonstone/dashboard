@@ -31,7 +31,7 @@ table
       h3 Status: #{@ios_auto.status}
       h4 Last Updated: #{@ios_auto.updated_at}
       h4 Comments: #{@ios_auto.comments}
-  tr style=("background:#{@android_auto_color} !important")
+  tr style=("background:#{@android_auto.color} !important")
     td
       h1 #{@android_auto.project_name}
       h3 Status: #{@android_auto.status}
@@ -53,9 +53,9 @@ h1 Additional QA Projects: #{@new_third_party.length}
 
 
 
-.jumbotron style=("background:#{@third_party_color} !important")
-  h1 3rd Parties
-  h3 Status: #{@third_party_status}
-  h4 Last Updated: #{@third_party.updated_at}
-  h4 Comments: #{@third_party.comments}
+/.jumbotron style=("background:#{@third_party_color} !important")
+/  h1 3rd Parties
+/  h3 Status: #{@third_party_status}
+/  h4 Last Updated: #{@third_party.updated_at}
+/  h4 Comments: #{@third_party.comments}
 
