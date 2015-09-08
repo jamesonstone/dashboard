@@ -17,7 +17,6 @@ class RecordsController < ApplicationController
 
   def create
     @record = Record.new(record_params)
-    raises @record.to_s
     @record.save
     redirect_to @record
   end
