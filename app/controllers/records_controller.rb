@@ -1,5 +1,5 @@
 class RecordsController < ApplicationController
-
+  # list of project names
   @@project_names = [
       'Android Flagship',
       'iOS Flagship',
@@ -18,10 +18,6 @@ class RecordsController < ApplicationController
   end
 
   def new
-  end
-
-
-  def new_project
   end
 
   def create
@@ -48,6 +44,13 @@ class RecordsController < ApplicationController
     @record.save
     #redirect to single record view (show)
     redirect_to @record
+  end
+
+  def destroy
+    @record_to_destroy = Record.find(params[:id])
+    @record_to_destroy.destroy
+
+    redirect_to records_path
   end
 
   private

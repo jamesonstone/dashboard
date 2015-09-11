@@ -55,4 +55,6 @@ h1 Additional QA Projects: #{@new_third_party.length}
           h3 Status: #{projects.status}
           h4 Last Updated: #{projects.updated_at}
           h4 Comments: #{projects.comments}
+          br
+          p  #{link_to 'Destory', record_path(projects), method: :delete, data: {confirm: 'Are you sure?'}}
 
